@@ -1,24 +1,17 @@
-import styled from 'styled-components';
-import IconOnlyButton from '../../../../../Components/IconOnlyButton';
-import EditIcon from '../../../../../Icons/EditIcon';
-import RemoveIcon from '../../../../../Icons/RemoveIcon';
+import styled from "styled-components";
+import EditIcon from "../../../../../Icons/EditIcon";
+import RemoveIcon from "../../../../../Icons/RemoveIcon";
 
-const Option = styled.div`
-    outline: none;
-    border-radius: 0px;
-    color: #0F172A;
-`;
+const Option = styled.div``;
 
 function ListElement(props) {
-    return (
-        <div className='d-flex flex-row justify-content-between gap-2'>
-            <Option>{props.children}</Option>
-                <div className='d-flex justify-content-end'>
-                <IconOnlyButton icon={<EditIcon/>}/>
-                <IconOnlyButton icon={<RemoveIcon/>}/>
-                </div>
-        </div>
-    );
+  return (
+    <div className="d-flex flex-row align-items-center align-self-stretch gap-2"> 
+      <Option className="flex-grow-1">{props.children}</Option>
+      <EditIcon minWidth="0">Ред.</EditIcon>
+      <RemoveIcon minWidth="0">Удл.</RemoveIcon>
+    </div>
+  );
 }
 
 export default ListElement;
